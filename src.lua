@@ -40,6 +40,7 @@ sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.End, function()
 	Library:ToggleUI()
 end)
 sets:NewTextBox("Key", "Key for scripts", function(txt)
-	key = txt
+		print(txt)
+		key = txt
 end)
 
