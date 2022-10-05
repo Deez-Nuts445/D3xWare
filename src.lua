@@ -7,6 +7,7 @@ local Tab2 = Window:NewTab("Other Scripts")
 local Tab3 = Window:NewTab("Settings")
 local sets = Tab3:NewSection("Settings")
 local Section = Tab:NewSection("O2 FE Script Hub")
+local key 
 
 Section:NewDropdown("Scripts (Dropdown)", "A Library of scripts on O2 FE Script Hub", {"iy","getjobid", "exit", "utg", "wallwalk", "utg", "gamegui", "ball", "choosemap", "alltools", "showglass", "pladmin", "admin", "fecheck", "reach", "flinggui","whatexplotsareonline"}, function(currentOption)
 function loadScript(v,send)
@@ -38,3 +39,7 @@ end)
 sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.End, function()
 	Library:ToggleUI()
 end)
+sets:NewTextBox("Key", "Key for scripts", function(txt)
+	key = txt
+end)
+
