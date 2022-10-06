@@ -37,7 +37,7 @@ module:Teleport(game.PlaceId)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/Noob's%20Script%20Hub%20Gui"))()
 end)
 
-sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.PageDown, function()
+sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.Home, function()
 	Library:ToggleUI()
 end)
 sets:NewTextBox("Key", "Key for scripts", function(txt)
