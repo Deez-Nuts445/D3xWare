@@ -1,4 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Belkworks/synlog/master/init.lua", "Log"))()
 local Window = Library.CreateLib("Noob's GUI Script Hub", "Synapse")
 local me = Window:NewTab("Home")
 local Home = me:NewSection("Welcome to Noob's Script Hub GUI, "..game.Players.LocalPlayer.Name)
@@ -42,4 +43,5 @@ end)
 sets:NewTextBox("Key", "Key for scripts", function(txt)
 		print(txt)
 		key = txt
+		Log:print("Key srt!")
 end)
