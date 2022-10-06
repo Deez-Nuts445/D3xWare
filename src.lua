@@ -43,5 +43,5 @@ end)
 sets:NewTextBox("Key", "Key for scripts", function(txt)
 		print(txt)
 		key = txt
-		Log:print("Key srt!")
+		Log:print("Key set!")
 end)
