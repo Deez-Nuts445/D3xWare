@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Noob's GUI Script Hub", "Ocean")
+local Window = Library.CreateLib("Noob's GUI Script Hub", "Synapse")
 local me = Window:NewTab("Home")
 local Home = me:NewSection("Welcome to Noob's Script Hub GUI, "..game.Players.LocalPlayer.Name)
 local Tab = Window:NewTab("My Scripts")
