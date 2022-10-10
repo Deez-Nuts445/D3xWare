@@ -41,7 +41,7 @@ local bb = Tab2:NewSection("Open Autoclicker GUI")
 bb:NewButton("Run", "Get GUI", function()
 getgenv().key = "z"
 	getgenv().time = 0.01
-	local gui = Library:NewWindow("Autoclicker GUI","Midnight")
+	local gui = Library.CreateLib("Autoclicker GUI","Midnight")
 	local tab = gui:NewTab("Configure")
 	local sec = tab:NewSection("Keys and time") -- for getgenv().key and getgenv().time
 	sec:NewTextBox("Key", "Key to toggle", function(txt)
