@@ -37,6 +37,23 @@ module:Teleport(game.PlaceId)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/Noob's%20Script%20Hub%20Gui"))()
 end)
 
+local bb = Tab2:NewSection("Open Autoclicker GUI")
+	getgenv().key = "z"
+	getgenv().time = 0.01
+	local gui = Library:NewWindow("Autoclicker GUI","Midnight")
+	local tab = gui:NewTab("Configure")
+	local sec = tab:NewSection("Keys and time") -- for getgenv().key and getgenv().time
+	sec:NewTextBox("Key", "Key to toggle", function(txt)
+	getgenv().key = txt
+end)
+sec:NewTextBox("Time", "Time for the autoclicker", function(txt)
+	getgenv().time = txt
+end)
+	local sec2 = tab:NewSection("Run")
+Section:NewButton("Run script", "Runs the autoclicker script", function()
+    print("Clicked")
+end)
+
 sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.Home, function()
 	Library:ToggleUI()
 end)
