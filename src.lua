@@ -51,8 +51,8 @@ sec:NewTextBox("Time", "Time for the autoclicker", function(txt)
 	getgenv().time = txt
 end)
 	local sec2 = tab:NewSection("Run")
-Section:NewButton("Run script", "Runs the autoclicker script", function()
-    print("Clicked")
+sec2:NewButton("Run script", "Runs the autoclicker script", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/AutoClicker"))()
 end)
 end)
 
