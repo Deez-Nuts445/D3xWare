@@ -38,6 +38,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbo
 end)
 
 local bb = Tab2:NewSection("Open Autoclicker GUI")
+bb:NewButton("Open GUI","vjisdjovgsjdgjsdog",function()
 	getgenv().key = "z"
 	getgenv().time = 0.01
 	local gui = Library:NewWindow("Autoclicker GUI","Midnight")
@@ -52,7 +53,8 @@ end)
 	local sec2 = tab:NewSection("Run")
 Section:NewButton("Run script", "Runs the autoclicker script", function()
     print("Clicked")
-end)
+end)	
+end)		
 
 sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.Home, function()
 	Library:ToggleUI()
