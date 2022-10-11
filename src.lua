@@ -50,3 +50,11 @@ sets:NewTextBox("Key", "Key for scripts", function(txt)
 		key = txt
 		Log:print("Key set!")
 end)
+
+
+local Credits = Window:NewSection("Credits")
+local Section10 = Credits:NewSection("Discord")
+Session10:NewButton("Discord","Join the discord", function()
+getgenv().InviteCode = "6kp4eSMq8k"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQLeak/Scripts/main/Discord-Auto-Join.lua"))()		
+end)
