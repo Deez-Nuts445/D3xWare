@@ -52,7 +52,7 @@ sets:NewTextBox("Key", "Key for scripts", function(txt)
 end)
 
 
-local Credits = Window:NewSection("Credits")
+local Credits = Window:NewTab("Credits")
 local Section10 = Credits:NewSection("Discord")
 Session10:NewButton("Discord","Join the discord", function()
 getgenv().InviteCode = "6kp4eSMq8k"
