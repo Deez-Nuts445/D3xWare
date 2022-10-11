@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Belkworks/synlog/master/init.lua", "Log"))()
-local Window = Library.CreateLib("Noob's Script Hub GUI", "Ocean")
+local Window = Library.CreateLib("Noob's Script Hub GUI", "Midnight")
 local me = Window:NewTab("Home")
 local Home = me:NewSection("Welcome to Noob's Script Hub GUI, "..game.Players.LocalPlayer.Name)
 local Tab = Window:NewTab("My Scripts")
@@ -39,21 +39,7 @@ end)
 
 local bb = Tab2:NewSection("Open Autoclicker GUI")
 bb:NewButton("Run", "Get GUI", function()
-getgenv().key = "z"
-	getgenv().time = 0.01
-	local gui = Library.CreateLib("Autoclicker GUI","Midnight")
-	local tab = gui:NewTab("Configure")
-	local sec = tab:NewSection("Keys and time") -- for getgenv().key and getgenv().time
-	sec:NewTextBox("Key", "Key to toggle", function(txt)
-	getgenv().key = txt
-end)
-sec:NewTextBox("Time", "Time for the autoclicker", function(txt)
-	getgenv().time = txt
-end)
-	local sec2 = tab:NewSection("Run")
-sec2:NewButton("Run script", "Runs the autoclicker script", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/AutoClicker"))()
-end)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/AutoClickerGui.lua"))()
 end)
 
 sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.Home, function()
