@@ -54,7 +54,7 @@ end)
 
 local Credits = Window:NewTab("Credits")
 local Section0 = Credits:NewSection("Discord")
-Session0:NewButton("Discord","Join the discord", function()
+Section0:NewButton("Discord","Join the discord", function()
 getgenv().InviteCode = "6kp4eSMq8k"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQLeak/Scripts/main/Discord-Auto-Join.lua"))()		
 end)
