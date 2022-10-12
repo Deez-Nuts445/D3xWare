@@ -42,6 +42,12 @@ bb:NewButton("Run", "Get GUI", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/AutoClickerGui.lua"))()
 end)
 
+
+local bh = Tab2:NewSection("Rejoin Server")
+bh:NewButton("Run", "Rejoin the server", function()
+game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+end)
+
 sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.Home, function()
 	Library:ToggleUI()
 end)
