@@ -1,13 +1,3 @@
---[[
-    SimpleSpy v2.2 SOURCE
-
-    SimpleSpy is a lightweight penetration testing tool that logs remote calls.
-
-    Credits:
-        exx - basically everything
-        Frosty - GUI to Lua
-]]
-
 -- shuts down the previous instance of SimpleSpy
 if _G.SimpleSpyExecuted and type(_G.SimpleSpyShutdown) == "function" then
 	print(pcall(_G.SimpleSpyShutdown))
