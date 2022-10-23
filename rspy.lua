@@ -2423,6 +2423,7 @@ end, function()
 			v:Destroy()
 		end
 	end
+	LogList.CanvasSize = UDim2.new(0)
 	codebox:setRaw("")
 	selected = nil
 	TextLabel.Text = "Logs cleared!"
