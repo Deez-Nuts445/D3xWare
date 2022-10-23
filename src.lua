@@ -74,6 +74,18 @@ function toClipboard(String)
 end
 toClipboard('require(10510278486).run("'..game.Players.LocalPlayer.Name..'")')
 end)
+se:NewButton("Bodyguard GUI","",function()
+function toClipboard(String)
+	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
+	if clipBoard then
+		clipBoard(String)
+		print("Ok")
+	else
+		warn("No")
+	end
+end
+toClipboard('require(11172873454).RMIA("'..game.Players.LocalPlayer.Name..'")')
+end)
 
 
 sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.Home, function()
