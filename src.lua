@@ -60,6 +60,22 @@ game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Playe
 end)
 
 
+local req_cp = Window:NewTab("Require Scripts")
+local se = req_cp:NewSection("Click to copy code")
+se:NewButton("NoobConsole V1.0.0","",function()
+function toClipboard(String)
+	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
+	if clipBoard then
+		clipBoard(String)
+		print("Ok")
+	else
+		warn("No")
+	end
+end
+toClipboard('require(10510278486).run("'..game.Players.LocalPlayer.Name..'")')
+end)
+
+
 sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.Home, function()
 	Library:ToggleUI()
 end)
