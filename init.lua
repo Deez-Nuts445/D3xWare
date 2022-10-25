@@ -15,7 +15,7 @@ local sets = Tab3:NewSection("UI Settings")
 local Section = Tab:NewSection("O2 Script Hub")
 local key 
 
-Section:NewDropdown("Scripts (Dropdown)", "A Library of scripts on O2 FE Script Hub", {"iy","getjobid", "antigrav", "exit", "utg","notesgui", "wallwalk", "utg", "gamegui", "ball", "choosemap", "alltools", "showglass", "pladmin", "admin", "fecheck", "reach", "flinggui","whatexplotsareonline"}, function(currentOption)
+Section:NewDropdown("Scripts (Dropdown)", "A Library of scripts on O2 FE Script Hub", {"iy","getjobid", "antigrav", "domain x", "exit", "utg","notesgui", "wallwalk", "utg", "gamegui", "ball", "choosemap", "alltools", "showglass", "pladmin", "admin", "fecheck", "reach", "flinggui","whatexplotsareonline"}, function(currentOption)
 function loadScript(v,send)
 getgenv().f = v
 getgenv().m = send
