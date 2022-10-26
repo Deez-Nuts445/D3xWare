@@ -1,4 +1,4 @@
--- aka VapeWare V1.0.01 or Noob's Script Hub GUI VW or VapeWare
+
 function getexploitname()
 local a=
 (TRIGON_LOADED and "Trigon EVO")or(syn and not is_sirhurt_closure and not pebc_execute and "Synapse")or(secure_load and "Sentinel")or(EVON_LOADED and "Evon")or(is_sirhurt_closure and "Sirhurt")or(pebc_execute and "ProtoSmasher")or(KRNL_LOADED and "Krnl")or(OXYGEN_LOADED and "Oxygen U")or(WrapGlobal and "WeAreDevs")or(IsElectron and "Electron")or(isvm and "Proxo")or(shadow_env and "Shadow")or(jit and "EasyExploits")or(getreg()['CalamariLuaEnv'] and "Calamari")or(unit and "‎")or(IS_VIVA_LOADED and "VIVA")or(IS_COCO_LOADED and "Coco")or("Unsupported Executor / No Executer")return a 
@@ -6,9 +6,9 @@ end
 local time_lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Belkworks/synlog/master/init.lua", "Log"))()
-local Window = Library.CreateLib("Noob's Script Hub GUI", "Midnight")
+local Window = Library.CreateLib("VapeWare V1.0.0", "Midnight")
 local me = Window:NewTab("Home")
-local Home = me:NewSection("Welcome to Noob's Script Hub GUI VapeWare, "..game.Players.LocalPlayer.Name.."!")
+local Home = me:NewSection("Welcome to VapeWare, "..game.Players.LocalPlayer.Name.."!")
 local Exp = me:NewSection("Exploit Using: "..getexploitname())
 local Tab = Window:NewTab("My Scripts")
 local Tab2 = Window:NewTab("Other Scripts")
@@ -27,11 +27,11 @@ loadScript(currentOption,true)
 end)
 local Section2 = Tab:NewSection("CCS 2 Car Spawner")
 Section2:NewButton("Run","Run Spawner",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/Noob-s-Script-Hub-GUI/main/t.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/VapeWare/main/t.lua"))()
 end)
 local Section3 = Tab:NewSection("Remote Spy")
 Section3:NewButton("Run","Run RemoteSpy",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/Noob-s-Script-Hub-GUI/main/rspy.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/VapeWare/main/rspy.lua"))()
 end)
 local Section4 = Tab:NewSection("Chat GUI")
 Section4:NewButton("Run","Run Chat GUI",function()
