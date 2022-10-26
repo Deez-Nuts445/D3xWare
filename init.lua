@@ -1,3 +1,4 @@
+-- aka VapeWare V1.0.01 or Noob's Script Hub GUI VW or VapeWare
 function getexploitname()
 local a=
 (TRIGON_LOADED and "Trigon EVO")or(syn and not is_sirhurt_closure and not pebc_execute and "Synapse")or(secure_load and "Sentinel")or(EVON_LOADED and "Evon")or(is_sirhurt_closure and "Sirhurt")or(pebc_execute and "ProtoSmasher")or(KRNL_LOADED and "Krnl")or(OXYGEN_LOADED and "Oxygen U")or(WrapGlobal and "WeAreDevs")or(IsElectron and "Electron")or(isvm and "Proxo")or(shadow_env and "Shadow")or(jit and "EasyExploits")or(getreg()['CalamariLuaEnv'] and "Calamari")or(unit and "‎")or(IS_VIVA_LOADED and "VIVA")or(IS_COCO_LOADED and "Coco")or("Unsupported Executor / No Executer")return a 
@@ -7,7 +8,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Belkworks/synlog/master/init.lua", "Log"))()
 local Window = Library.CreateLib("Noob's Script Hub GUI", "Midnight")
 local me = Window:NewTab("Home")
-local Home = me:NewSection("Welcome to Noob's Script Hub GUI, "..game.Players.LocalPlayer.Name.."!")
+local Home = me:NewSection("Welcome to Noob's Script Hub GUI VapeWare, "..game.Players.LocalPlayer.Name.."!")
 local Exp = me:NewSection("Exploit Using: "..getexploitname())
 local Tab = Window:NewTab("My Scripts")
 local Tab2 = Window:NewTab("Other Scripts")
@@ -110,7 +111,7 @@ Section0:NewButton("Discord","Join the discord", function()
 getgenv().InviteCode = "6kp4eSMq8k"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQLeak/Scripts/main/Discord-Auto-Join.lua"))()		
 end)
-
+-- ↓ NO CODE EXCEPT LOOP CODE DOWN ↓ --
 local tim = Exp:NewLabel("")
 while wait(0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001) do
 local timm = time_lib.GetDate():format("#h:#m:#s")
