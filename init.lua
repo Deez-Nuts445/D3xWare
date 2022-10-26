@@ -111,6 +111,9 @@ Section0:NewButton("Discord","Join the discord", function()
 getgenv().InviteCode = "6kp4eSMq8k"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQLeak/Scripts/main/Discord-Auto-Join.lua"))()		
 end)
+Section0:NewButton("VapeWare Owner: gbic#1323","Join the discord", function()
+		
+end)
 -- ↓ NO CODE EXCEPT LOOP CODE DOWN ↓ --
 local tim = Exp:NewLabel("")
 while wait(0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001) do
