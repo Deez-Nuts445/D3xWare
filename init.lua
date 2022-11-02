@@ -112,7 +112,7 @@ local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/Regula
 Module.Prompt({ invite = "6kp4eSMq8k", name = "O2 Scripts" }) -- name is optional
 Module.Join("6kp4eSMq8k")
 end)
-Section0:NewButton("VapeWare Owner: gbic#1323","Join the discord", function()
+Section0:NewButton("VapeWare Owner: gbic#1323","", function()
 		
 end)
 -- ↓ NO CODE EXCEPT LOOP CODE DOWN ↓ --
