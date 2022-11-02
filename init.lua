@@ -25,6 +25,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/O2-FE-Sc
 end
 loadScript(currentOption,true)
 end)
+local Section1 = Tab:NewSection("Unlock Freecam(Ctrl+P to toggle)")
+Section1:NewButton("Run","Run Spawner",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/VapeWare/main/freecam.lua"))()
+end)
 local Section2 = Tab:NewSection("CCS 2 Car Spawner")
 Section2:NewButton("Run","Run Spawner",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/VapeWare/main/t.lua"))()
