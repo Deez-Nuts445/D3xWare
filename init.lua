@@ -108,8 +108,9 @@ end)
 local Credits = Window:NewTab("Credits")
 local Section0 = Credits:NewSection("Discord")
 Section0:NewButton("Discord","Join the discord", function()
-getgenv().InviteCode = "6kp4eSMq8k"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaQLeak/Scripts/main/Discord-Auto-Join.lua"))()		
+local Module = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
+Module.Prompt({ invite = "6kp4eSMq8k", name = "O2 Scripts" }) -- name is optional
+Module.Join("6kp4eSMq8k")
 end)
 Section0:NewButton("VapeWare Owner: gbic#1323","Join the discord", function()
 		
