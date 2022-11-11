@@ -17,7 +17,7 @@ local sets = Tab3:NewSection("UI Settings")
 local Section = Tab:NewSection("O2 Script Hub")
 local key 
 
-Section:NewDropdown("Scripts (Dropdown)", "A Library of scripts on O2 FE Script Hub", {"domain x","iy","getjobid", "antigrav", "exit", "utg","notesgui", "wallwalk", "utg", "gamegui", "ball", "choosemap", "alltools", "pladmin", "admin", "fecheck", "reach", "flinggui","whatexplotsareonline"}, function(currentOption)
+Section:NewDropdown("Scripts (Dropdown)", "A Library of scripts on O2 FE Script Hub", {"domain x","iy","getjobid", "antigrav", "exit", "utg","notesgui", "wallwalk", "utg", "gamegui", "ball", "choosemap", "alltools", "admin", "fecheck", "reach", "flinggui","whatexplotsareonline"}, function(currentOption)
 function loadScript(v,send)
 getgenv().f = v
 getgenv().m = send
@@ -119,6 +119,18 @@ end)
 Section0:NewButton("VapeWare Owner: gbic#1323","", function()
 		
 end)
+if game.PlaceId == 155615604 then
+	local plsec = Window:NewTab("Prison Life Scripts")
+    local warr = plsec:NewSection(" ")
+	local btn1 = warr:NewButton("Inf statamina","",function()
+		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ImMejor35/Prison-Life/main/Infinite%20Stamina.lua"))()
+	end)
+	local btn2 = warr:NewButton("Prison life admin","",function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
+	end)
+else
+warn("d")
+end	
 -- ↓ NO CODE EXCEPT LOOP CODE DOWN ↓ --
 local tim = Exp:NewLabel("")
 while wait(0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001) do
