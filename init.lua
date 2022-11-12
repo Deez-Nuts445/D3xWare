@@ -1,3 +1,15 @@
+function getPlaceId()
+return game.PlaceId
+end
+function fov(v)
+if v == "def" then
+workspace.CurrentCamera.FieldOfView = 70
+elseif tonumber(v) ~= nil then
+workspace.CurrentCamera.FieldOfView = v
+else
+warn("Not a number!")
+end
+end
 
 function getexploitname()
 local a=
@@ -9,6 +21,9 @@ local Log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Belkworks
 local Window = Library.CreateLib("VapeWare V1.0.0", "Midnight")
 local me = Window:NewTab("Home")
 local Home = me:NewSection("Welcome to VapeWare, "..game.Players.LocalPlayer.Name.."!")
+local pen = Home:NewTextBox("Fov",'change to "def" for default FOV also you gotta press return',function(t)
+    fov(t)
+end)
 local Exp = me:NewSection("Exploit Using: "..getexploitname())
 local Tab = Window:NewTab("My Scripts")
 local Tab2 = Window:NewTab("Other Scripts")
@@ -119,7 +134,8 @@ end)
 Section0:NewButton("VapeWare Owner: gbic#1323","", function()
 		
 end)
-if game.PlaceId == 155615604 then
+-- game detection
+if getPlaceId() == 155615604 then
 	local plsec = Window:NewTab("Prison Life Scripts")
     local warr = plsec:NewSection(" ")
 	local btn1 = warr:NewButton("Inf statamina","",function()
