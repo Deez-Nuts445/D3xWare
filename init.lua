@@ -159,6 +159,9 @@ if getPlaceId() == 5985232436 then
 	local btn1 = warr:NewButton("Infectious smile GUI","",function()
 		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/InfectiousSmile.lua"))()
 	end)
+	local btn2 = warr:NewButton("Reach","",function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/Jsghb8bt'))()
+	end)
 end	
 local gname_uncap = string.lower(getGameName())
 if string.match(gname_uncap,"cart") or string.match(gname_uncap,"cart ride") or string.match(gname_uncap,"cart ride around") or string.match(gname_uncap,"cart ride into") ~= nil then
