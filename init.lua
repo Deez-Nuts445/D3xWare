@@ -1,6 +1,10 @@
 function getPlaceId()
 return game.PlaceId
 end
+function getGameName()
+local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+return GameName
+end
 function fov(v)
 if v == "def" then
 workspace.CurrentCamera.FieldOfView = 70
@@ -54,6 +58,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/VapeWare
 end)
 local Section4 = Tab:NewSection("Chat GUI")
 Section4:NewButton("Run","Run Chat GUI",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/Deez-Nuts445.github.io/main/sss.lua"))()
+end)
+local Section5 = Tab:NewSection("FE Check")
+Section5:NewButton("Run","Run FE Check",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/Deez-Nuts445.github.io/main/sss.lua"))()
 end)
 local dd = Tab2:NewSection("ZMod v2.3")
@@ -144,8 +152,21 @@ if getPlaceId() == 155615604 then
 	local btn2 = warr:NewButton("Prison life admin","",function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
 	end)
-else
-warn("d")
+end	
+if getPlaceId() == 5985232436 then
+	local plsec = Window:NewTab("InfectiousSmile Scripts")
+    local warr = plsec:NewSection(" ")
+	local btn1 = warr:NewButton("Infectious smile GUI","",function()
+		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/InfectiousSmile.lua"))()
+	end)
+end	
+local gname_uncap = string.lower(getGameName())
+if string.match(gname_uncap,"cart") or string.match(gname_uncap,"cart ride") or string.match(gname_uncap,"cart ride around") or string.match(gname_uncap,"cart ride into") ~= nil then
+	local plsec = Window:NewTab("Cart ride Scripts")
+    local warr = plsec:NewSection(" ")
+local btn1 = warr:NewButton("Cart Booster","",function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/CartBooster"))()
+end)
 end	
 -- ↓ NO CODE EXCEPT LOOP CODE DOWN ↓ --
 local tim = Exp:NewLabel("")
