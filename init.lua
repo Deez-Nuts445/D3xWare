@@ -62,7 +62,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/Deez-Nut
 end)
 local Section6 = Tab:NewSection("FE Check")
 Section6:NewButton("Run","Run FE Check",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/Deez-Nuts445.github.io/main/sss.lua"))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/FECheck'),true))()
 end)
 local Section7 = Tab:NewSection("Enable Shiftlock")
 Section7:NewToggle("Toggle","",function(t)
