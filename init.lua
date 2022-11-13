@@ -1,10 +1,19 @@
 function getPlaceId()
 return game.PlaceId
 end
+function randomString()
+	local length = math.random(10,20)
+	local array = {}
+	for i = 1, length do
+		array[i] = string.char(math.random(32, 126))
+	end
+	return table.concat(array)
+end
 function getGameName()
 local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 return GameName
 end
+
 function fov(v)
 if v == "def" then
 workspace.CurrentCamera.FieldOfView = 70
@@ -28,6 +37,7 @@ local Home = me:NewSection("Welcome to VapeWare, "..game.Players.LocalPlayer.Nam
 local pen = Home:NewTextBox("Fov",'change to "def" for default FOV also you gotta press return',function(t)
     fov(t)
 end)
+local pen2 = Home:NewLabel("SessionId: "..randomString())
 local Exp = me:NewSection("Exploit Using: "..getexploitname())
 local Tab = Window:NewTab("My Scripts")
 local Tab2 = Window:NewTab("Other Scripts")
@@ -35,7 +45,13 @@ local Tab3 = Window:NewTab("Settings")
 local sets = Tab3:NewSection("UI Settings")
 local Section = Tab:NewSection("O2 Script Hub")
 local key 
-
+spawn(function()
+	local tim = Exp:NewLabel("")	
+	while wait(0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001) do
+	local timm = time_lib.GetDate():format("#h:#m:#s")
+	tim:UpdateLabel("Time now(24 hour): "..timm )
+end
+end)
 Section:NewDropdown("Scripts (Dropdown)", "A Library of scripts on O2 FE Script Hub", {"domain x","iy","getjobid", "antigrav", "exit", "utg","notesgui", "wallwalk", "utg", "gamegui", "ball", "choosemap", "alltools", "admin", "fecheck", "reach", "flinggui","whatexplotsareonline"}, function(currentOption)
 function loadScript(v,send)
 getgenv().f = v
@@ -175,18 +191,3 @@ local btn1 = warr:NewButton("Cart Booster","",function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/CartBooster"))()
 end)
 end	
-if getPlaceId() == 11346342371 then
-	local plsec = Window:NewTab("MMIYBA3AT Scripts")
-	local warr = plsec:NewSection(" ")
-	local btn1 = warr:NewButton("Very OP","",function()
-		loadstring(game:HttpGet('https://www.venity.ml/VenityClassic.lua'))()
-	end)
-end
-spawn(function()
-	local tim = Exp:NewLabel("")	
-	while wait(0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001) do
-	local timm = time_lib.GetDate():format("#h:#m:#s")
-	tim:UpdateLabel("Time now(24 hour): "..timm )
-end
-	end
-end)
