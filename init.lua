@@ -182,9 +182,11 @@ if getPlaceId() == 11346342371 then
 		loadstring(game:HttpGet('https://www.venity.ml/VenityClassic.lua'))()
 	end)
 end
--- ↓ NO CODE EXCEPT LOOP CODE DOWN ↓ --
-local tim = Exp:NewLabel("")
-while wait(0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001) do
-local timm = time_lib.GetDate():format("#h:#m:#s")
-tim:UpdateLabel("Time now(24 hour): "..timm )
+spawn(function()
+	local tim = Exp:NewLabel("")	
+	while wait(0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001) do
+	local timm = time_lib.GetDate():format("#h:#m:#s")
+	tim:UpdateLabel("Time now(24 hour): "..timm )
 end
+	end
+end)
