@@ -1,8 +1,8 @@
 function getPlaceId()
 return game.PlaceId
 end
-function randomString()
-	local length = math.random(10,20)
+function randomString(len)
+	local length = len
 	local array = {}
 	for i = 1, length do
 		array[i] = string.char(math.random(32, 126))
@@ -37,7 +37,7 @@ local Home = me:NewSection("Welcome to VapeWare, "..game.Players.LocalPlayer.Nam
 local pen = Home:NewTextBox("Fov",'change to "def" for default FOV also you gotta press return',function(t)
     fov(t)
 end)
-local pen2 = Home:NewLabel("SessionId: "..randomString())
+local pen2 = Home:NewLabel("SessionId: "..randomString(10))
 local Exp = me:NewSection("Exploit Using: "..getexploitname())
 local Tab = Window:NewTab("My Scripts")
 local Tab2 = Window:NewTab("Other Scripts")
