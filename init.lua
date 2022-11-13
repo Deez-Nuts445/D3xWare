@@ -60,9 +60,13 @@ local Section4 = Tab:NewSection("Chat GUI")
 Section4:NewButton("Run","Run Chat GUI",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/Deez-Nuts445.github.io/main/sss.lua"))()
 end)
-local Section5 = Tab:NewSection("FE Check")
-Section5:NewButton("Run","Run FE Check",function()
+local Section6 = Tab:NewSection("FE Check")
+Section6:NewButton("Run","Run FE Check",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/Deez-Nuts445.github.io/main/sss.lua"))()
+end)
+local Section7 = Tab:NewSection("Enable Shiftlock")
+Section7:NewToggle("Toggle","",function(t)
+game.Players.LocalPlayer.DevEnableMouseLock = t	
 end)
 local dd = Tab2:NewSection("ZMod v2.3")
 dd:NewButton("Run", "ZMod v2.3", function()
@@ -171,6 +175,13 @@ local btn1 = warr:NewButton("Cart Booster","",function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/CartBooster"))()
 end)
 end	
+if getPlaceId() == 11346342371 then
+	local plsec = Window:NewTab("MMIYBA3AT Scripts")
+	local warr = plsec:NewSection(" ")
+	local btn1 = warr:NewButton("Very OP","",function()
+		loadstring(game:HttpGet('https://www.venity.ml/VenityClassic.lua'))()
+	end)
+end
 -- ↓ NO CODE EXCEPT LOOP CODE DOWN ↓ --
 local tim = Exp:NewLabel("")
 while wait(0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001) do
