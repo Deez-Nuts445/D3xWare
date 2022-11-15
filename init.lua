@@ -1,6 +1,9 @@
 function getPlaceId()
 return game.PlaceId
 end
+function getGameId()
+return game.GameId
+end
 function randomString(len)
 	local length = len
 	local array = {}
@@ -31,13 +34,13 @@ end
 local time_lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Belkworks/synlog/master/init.lua", "Log"))()
-local Window = Library.CreateLib("VapeWare V1.0.0", "Midnight")
+local Window = Library.CreateLib("VapeWare", "Midnight")
 local me = Window:NewTab("Home")
 local Home = me:NewSection("Welcome to VapeWare, "..game.Players.LocalPlayer.Name.."!")
 local pen = Home:NewTextBox("Fov",'change to "def" for default FOV also you gotta press return',function(t)
     fov(t)
 end)
-local pen2 = Home:NewLabel("SessionId: "..randomString(10))
+local pen2 = Home:NewLabel("SessionId: "..randomString(math.random(10,15)))
 local Exp = me:NewSection("Exploit Using: "..getexploitname())
 local Tab = Window:NewTab("My Scripts")
 local Tab2 = Window:NewTab("Other Scripts")
@@ -63,10 +66,6 @@ end)
 local Section1 = Tab:NewSection("Unlock Freecam(Ctrl+P to toggle)")
 Section1:NewButton("Run","Run Spawner",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/VapeWare/main/freecam.lua"))()
-end)
-local Section2 = Tab:NewSection("CCS 2 Car Spawner")
-Section2:NewButton("Run","Run Spawner",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/VapeWare/main/t.lua"))()
 end)
 local Section3 = Tab:NewSection("Remote Spy")
 Section3:NewButton("Run","Run RemoteSpy",function()
@@ -191,3 +190,10 @@ local btn1 = warr:NewButton("Cart Booster","",function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/CartBooster"))()
 end)
 end	
+if getGameId() == 3572713022 then
+local plsec = Window:NewTab("CCS Scripts")
+local warr = plsec:NewSection(" ")
+warr:NewButton("CCS Car spawner","Run Spawner",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/VapeWare/main/t.lua"))()
+end)
+end
