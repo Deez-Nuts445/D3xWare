@@ -34,7 +34,7 @@ else
 warn("Not a number!")
 end
 end
-
+local name = "D3xWare"
 function getexploitname()
 local a=
 (TRIGON_LOADED and "Trigon EVO")or(syn and not is_sirhurt_closure and not pebc_execute and "Synapse")or(secure_load and "Sentinel")or(EVON_LOADED and "Evon")or(is_sirhurt_closure and "Sirhurt")or(pebc_execute and "ProtoSmasher")or(KRNL_LOADED and "Krnl")or(OXYGEN_LOADED and "Oxygen U")or(WrapGlobal and "WeAreDevs")or(IsElectron and "Electron")or(isvm and "Proxo")or(shadow_env and "Shadow")or(jit and "EasyExploits")or(getreg()['CalamariLuaEnv'] and "Calamari")or(unit and "‎")or(IS_VIVA_LOADED and "VIVA")or(IS_COCO_LOADED and "Coco")or("Unsupported Executor / No Executer")return a 
@@ -42,9 +42,9 @@ end
 local time_lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Belkworks/synlog/master/init.lua", "Log"))()
-local Window = Library.CreateLib("VapeWare", "Midnight")
+local Window = Library.CreateLib(name, "Midnight")
 local me = Window:NewTab("Home")
-local Home = me:NewSection("Welcome to VapeWare, "..game.Players.LocalPlayer.Name.."!")
+local Home = me:NewSection("Welcome to "..name..","..game.Players.LocalPlayer.Name.."!")
 local pen = Home:NewTextBox("Fov",'change to "def" for default FOV also you gotta press return',function(t)
     fov(t)
 end)
