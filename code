@@ -1,3 +1,3 @@
--- Thank you for using VapeWare!
+-- Thank you for using D3xWare!
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/VapeWare/init.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/D3xWare/init.lua"))()
