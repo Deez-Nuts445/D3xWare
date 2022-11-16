@@ -1,8 +1,16 @@
-function getPlaceId()
-return game.PlaceId
+function detectPlaceId(id)
+if game.PlaceId == tonumber(id) then
+		return true
+else
+		return false
 end
-function getGameId()
-return game.GameId
+end
+function detectGameId(id)
+if game.GameId == tonumber(id) then
+		return true
+else
+		return false
+end	
 end
 function randomString(len)
 	local length = len
@@ -162,7 +170,7 @@ Section0:NewButton("VapeWare Owner: gbic#1323","", function()
 		
 end)
 -- game detection
-if getPlaceId() == 155615604 then
+if detectPlaceId("155615604") then
 	local plsec = Window:NewTab("Prison Life Scripts")
     local warr = plsec:NewSection(" ")
 	local btn1 = warr:NewButton("Inf statamina","",function()
@@ -172,14 +180,11 @@ if getPlaceId() == 155615604 then
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
 	end)
 end	
-if getPlaceId() == 5985232436 then
+if detectPlaceId("5985232436") then
 	local plsec = Window:NewTab("InfectiousSmile Scripts")
     local warr = plsec:NewSection(" ")
 	local btn1 = warr:NewButton("Infectious smile GUI","",function()
 		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/InfectiousSmile.lua"))()
-	end)
-	local btn2 = warr:NewButton("Reach","",function()
-	loadstring(game:HttpGet('https://pastebin.com/raw/Jsghb8bt'))()
 	end)
 end	
 local gname_uncap = string.lower(getGameName())
@@ -190,7 +195,7 @@ local btn1 = warr:NewButton("Cart Booster","",function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/CartBooster"))()
 end)
 end	
-if getGameId() == 3572713022 then
+if detectGameId("3572713022") then
 local plsec = Window:NewTab("CCS Scripts")
 local warr = plsec:NewSection(" ")
 warr:NewButton("CCS Car spawner","Run Spawner",function()
