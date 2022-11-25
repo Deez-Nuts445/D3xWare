@@ -5,6 +5,14 @@ else
 		return false
 end
 end
+function grav(n)
+if n == "def" then
+game.workspace.Gravity = 192.6
+elseif tonumber(n) ~= nil then
+game.workspace.Gravity = n
+end
+end
+
 function detectGameId(id)
 if game.GameId == tonumber(id) then
 		return true
@@ -56,14 +64,14 @@ local Tab3 = Window:NewTab("Settings")
 local sets = Tab3:NewSection("UI Settings")
 local Section = Tab:NewSection("O2 Script Hub")
 local key 
-spawn(function()
-	local tim = Exp:NewLabel("")	
+spawn(function()	
+local tim = Exp:NewLabel("Time now(24 hour): "..time_lib.GetDate():format("#h:#m:#s") )
 	while wait(0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001) do
 	local timm = time_lib.GetDate():format("#h:#m:#s")
 	tim:UpdateLabel("Time now(24 hour): "..timm )
 end
 end)
-Section:NewDropdown("Scripts (Dropdown)", "A Library of scripts on O2 FE Script Hub", {"domain x","iy","getjobid", "antigrav", "exit", "utg","notesgui", "wallwalk", "utg", "gamegui", "ball", "choosemap", "alltools", "admin", "fecheck", "reach", "flinggui","whatexplotsareonline"}, function(currentOption)
+Section:NewDropdown("Scripts (Dropdown)", "A Library of scripts on O2 FE Script Hub", {"domain x","iy","getjobid", "antigrav", "exit", "utg","notesgui", "wallwalk", "choosemap", "alltools", "admin", "fecheck", "reach", "flinggui","whatexplotsareonline"}, function(currentOption)
 function loadScript(v,send)
 getgenv().f = v
 getgenv().m = send
@@ -71,6 +79,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/O2-FE-Sc
 end
 loadScript(currentOption,true)
 end)
+
 local Section1 = Tab:NewSection("Unlock Freecam(Ctrl+P to toggle)")
 Section1:NewButton("Run","Run Spawner",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/VapeWare/main/freecam.lua"))()
@@ -78,6 +87,10 @@ end)
 local Section3 = Tab:NewSection("Remote Spy")
 Section3:NewButton("Run","Run RemoteSpy",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/VapeWare/main/rspy.lua"))()
+end)
+local Section1011 = Tab:NewSection("Synapse X vRBX")
+Section1011:NewButton("Run","Run SX",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/D3xWare/main/synx_rblx.lua"))()
 end)
 local Section4 = Tab:NewSection("Chat GUI")
 Section4:NewButton("Run","Run Chat GUI",function()
@@ -135,6 +148,18 @@ function toClipboard(String)
 end
 toClipboard('require(10510278486).run("'..game.Players.LocalPlayer.Name..'")')
 end)
+se:NewButton("Some skidded gui","",function()
+function toClipboard(String)
+	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
+	if clipBoard then
+		clipBoard(String)
+		print("Ok")
+	else
+		warn("No")
+	end
+end
+toClipboard("require(10189218393):adrian('"..game.Players.LocalPlayer.Name.."')")
+end)
 se:NewButton("Bodyguard GUI","",function()
 function toClipboard(String)
 	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
@@ -147,8 +172,6 @@ function toClipboard(String)
 end
 toClipboard('require(11172873454).RMIA("'..game.Players.LocalPlayer.Name..'")')
 end)
-
-
 sets:NewKeybind("Toggle UI", "Toggles UI", Enum.KeyCode.Home, function()
 	Library:ToggleUI()
 end)
@@ -200,5 +223,21 @@ local plsec = Window:NewTab("CCS Scripts")
 local warr = plsec:NewSection(" ")
 warr:NewButton("CCS Car spawner","Run Spawner",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/VapeWare/main/t.lua"))()
+end)
+warr:NewTextBox("Car Gravity","def for default, press return after inputting grav", function(txt)
+grav(txt)
+end)
+end
+if detectPlaceId("7993293100") then
+local plsec = Window:NewTab("Tsunami Game Scripts")
+local warr = plsec:NewSection(" ")
+warr:NewDropdown("Spawn Locations","only for researcher",{"1 (spawn)","2 (research room)","3 (research cafeteria)","4 (end)","5 (car park)"},function(sel)    
+print(string.sub(sel,"1","1"))
+local args = {
+    [1] = string.sub(sel,"1","1")
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Gui.ResearcherTeleportSystem:FireServer(unpack(args))
+
 end)
 end
