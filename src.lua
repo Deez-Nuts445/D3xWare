@@ -165,6 +165,7 @@ game.Players.LocalPlayer.DevEnableMouseLock = t
 end)
 local req_cp = scripts:Channel("Require Scripts")
 req_cp:Label("Click to copy script")
+req_cp:Seperator()
 req_cp:Button("NoobConsole V1.0.0",function()
 function toClipboard(String)
 	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
