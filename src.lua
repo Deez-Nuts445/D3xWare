@@ -123,7 +123,7 @@ end
 loadScript(sel,shared.m)
 end)
 local aa = label:Toggle("Send Notifications",true,function(t)
-shared.m = false
+shared.m = t
 end)
 local chh = scripts:Channel("Others")
 chh:Button("Unlock freecam(ctrl + P)",function()
