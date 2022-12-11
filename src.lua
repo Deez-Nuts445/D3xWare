@@ -151,7 +151,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbo
 end)
 chh:Seperator()
 chh:Button("Server Hop",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d",true))()
+local module = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
+
+module:Teleport(game.PlaceId)
 end)
 chh:Seperator()
 chh:Button("Rejoin Server",function()
