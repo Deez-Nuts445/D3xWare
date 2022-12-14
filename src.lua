@@ -1,3 +1,4 @@
+-- // D3xWare V1.0.1 
 function detectPlaceId(id)
 if game.PlaceId == tonumber(id) then
 		return true
@@ -57,12 +58,12 @@ function jumppower(v)
 local lp = game.Players.LocalPlayer
 local char = lp.Character
 if v == "def" then
-char.Humanoid.JumpPower = 50
+char.Humanoid.JumpPower = 47
 elseif tonumber(v) ~= nil then
 char.Humanoid.JumpPower = v
 end
 end
-local name = "D3xWare V1.0.0"
+local name = "D3xWare V1.0.1"
 local Log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Belkworks/synlog/master/init.lua", "Log"))()
 local time_lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d.lua"))()
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/discord-ui.lua")()
@@ -88,11 +89,17 @@ end)
 plset:Textbox("Jump",'"def" for default jumppower',false,function(v)
 shared.jmp = v
 end)
+plset:Button("Reset To Normal",function()
+shared.fov = 70
+shared.grav = 192.6
+shared.speed = 16
+shared.jumppower = 47
+end)
 spawn(function()
 	while wait() do
 			fov(shared.fov)
 			grav(shared.grav)
-            		speed(shared.speed)
+            speed(shared.speed)
 			jumppower(shared.jmp)
 	end
 end)
