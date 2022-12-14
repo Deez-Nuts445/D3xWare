@@ -42,8 +42,6 @@ if v == "def" then
 workspace.CurrentCamera.FieldOfView = 70
 elseif tonumber(v) ~= nil then
 workspace.CurrentCamera.FieldOfView = v
-else
-warn("Not a number!")
 end
 end
 function speed(v)
@@ -53,8 +51,6 @@ if v == "def" then
 char.Humanoid.WalkSpeed = 16
 elseif tonumber(v) ~= nil then
 char.Humanoid.WalkSpeed = v
-else
-warn("Not a number!")
 end
 end
 function jumppower(v)
@@ -64,8 +60,6 @@ if v == "def" then
 char.Humanoid.JumpPower = 50
 elseif tonumber(v) ~= nil then
 char.Humanoid.JumpPower = v
-else
-warn("Not a number!")
 end
 end
 local name = "D3xWare V1.0.0"
@@ -82,17 +76,25 @@ local pen2 = ch:Label("SessionId: "..randomString(math.random(10,15)))
 ch:Seperator()
 local Exp = ch:Label("Exploit Using: "..getexploitname())
 local plset = home:Channel("Player")
-local fov = plset:Textbox("FOV",'"def" for default FOV',false,function(v)
-fov(v)
+plset:Textbox("FOV",'"def" for default FOV',false,function(v)
+shared.fov = v
 end)
-local gra = plset:Textbox("Gravity",'"def" for default gravity',false,function(v)
-grav(v)
+plset:Textbox("Gravity",'"def" for default gravity',false,function(v)
+shared.grav = v
 end)
-local speed = plset:Textbox("Speed",'"def" for default speed',false,function(v)
-speed(v)
+plset:Textbox("Speed",'"def" for default speed',false,function(v)
+shared.speed = v
 end)
-local jmp = plset:Textbox("Jump",'"def" for default jumppower',false,function(v)
-jumppower(v)
+plset:Textbox("Jump",'"def" for default jumppower',false,function(v)
+shared.jmp = v
+end)
+spawn(function()
+	while wait() do
+			fov(shared.fov)
+			grav(shared.grav)
+            		speed(shared.speed)
+			jumppower(shared.jmp)
+	end
 end)
 local credits = home:Channel("Credits")
 local a = credits:Label("Made by herman_484")
