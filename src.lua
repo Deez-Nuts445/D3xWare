@@ -1,10 +1,27 @@
--- // D3xWare V1.0.1 
+-- // D3xWare V1.0.2 
 function detectPlaceId(id)
 if game.PlaceId == tonumber(id) then
 		return true
 else
 		return false
 end
+end
+function GetClosestPlayer()
+local player = game.Players.LocalPlayer
+local players = game.Players:GetPlayers()
+  local minDistance = math.huge
+  local closestPlayer = nil
+  for _, otherPlayer in pairs(players) do
+    if otherPlayer == player then
+      continue
+    end
+    local distance = (player.Character.PrimaryPart.Position - otherPlayer.Character.PrimaryPart.Position).magnitude
+    if distance < minDistance then
+      closestPlayer = otherPlayer
+      minDistance = distance
+    end
+  end
+  return closestPlayer,"With a distance of "..minDistance
 end
 function getexploitname()
 local a=
@@ -58,12 +75,12 @@ function jumppower(v)
 local lp = game.Players.LocalPlayer
 local char = lp.Character
 if v == "def" then
-char.Humanoid.JumpPower = 47
+char.Humanoid.JumpPower = 50
 elseif tonumber(v) ~= nil then
 char.Humanoid.JumpPower = v
 end
 end
-local name = "D3xWare V1.0.1"
+local name = "D3xWare V1.0.2"
 local Log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Belkworks/synlog/master/init.lua", "Log"))()
 local time_lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d.lua"))()
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/discord-ui.lua")()
@@ -93,7 +110,13 @@ plset:Button("Reset To Normal",function()
 shared.fov = 70
 shared.grav = 192.6
 shared.speed = 16
-shared.jumppower = 47
+shared.jumppower = 50
+end)
+plset:Button("Refresh",function()
+fov(shared.fov)
+grav(shared.grav)
+speed(shared.speed)
+jumppower(shared.jmp)
 end)
 spawn(function()
 	while wait() do
@@ -214,6 +237,11 @@ end)
 local _gam = win:Server("Game Detection","0df")
 local MM = _gam:Channel("Info")
 local aaa = MM:Label("This section is for game detectected scripts.")
+local utils = win:Server("Tools",0)
+local page1 = utils:Channel("Player")
+page1:Button("Nearest Player",function()
+Log:print(GetClosestPlayer())
+end)
 if detectPlaceId("155615604") then
 	local plsec = _gam:Channel("Prison Life Scripts")
 	local btn1 = plsec:Button("Inf statamina",function()
