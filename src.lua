@@ -6,6 +6,7 @@ else
 		return false
 end
 end
+
 function GetClosestPlayer()
 local player = game.Players.LocalPlayer
 local players = game.Players:GetPlayers()
@@ -18,11 +19,19 @@ local players = game.Players:GetPlayers()
     local distance = (player.Character.PrimaryPart.Position - otherPlayer.Character.PrimaryPart.Position).magnitude
     if distance < minDistance then
       closestPlayer = otherPlayer
+      print(closestPlayer)
       minDistance = distance
+      display = game.Players:FindFirstChild(closestPlayer.Name).DisplayName
     end
   end
-  return closestPlayer,"With a distance of "..minDistance
+if display == closestPlayer.Name then
+return closestPlayer,"has a distance of "..minDistance
+else
+return display..",aka",closestPlayer,"has a distance of "..minDistance
 end
+end
+
+
 function getexploitname()
 local a=
 (TRIGON_LOADED and "Trigon EVO")or(syn and not is_sirhurt_closure and not pebc_execute and "Synapse")or(secure_load and "Sentinel")or(EVON_LOADED and "Evon")or(is_sirhurt_closure and "Sirhurt")or(pebc_execute and "ProtoSmasher")or(KRNL_LOADED and "Krnl")or(OXYGEN_LOADED and "Oxygen U")or(WrapGlobal and "WeAreDevs")or(IsElectron and "Electron")or(isvm and "Proxo")or(shadow_env and "Shadow")or(jit and "EasyExploits")or(getreg()['CalamariLuaEnv'] and "Calamari")or(unit and "‎")or(IS_VIVA_LOADED and "VIVA")or(IS_COCO_LOADED and "Coco")or("Unsupported Executor / No Executer")return a 
