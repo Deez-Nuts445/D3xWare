@@ -1,4 +1,5 @@
 -- // D3xWare V1.0.2 
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/discord-ui.lua")()
 function detectPlaceId(id)
 if game.PlaceId == tonumber(id) then
 		return true
@@ -6,6 +7,7 @@ else
 		return false
 end
 end
+
 function getexploitname()
 local a=
 (TRIGON_LOADED and "Trigon EVO")or(syn and not is_sirhurt_closure and not pebc_execute and "Synapse")or(secure_load and "Sentinel")or(EVON_LOADED and "Evon")or(is_sirhurt_closure and "Sirhurt")or(pebc_execute and "ProtoSmasher")or(KRNL_LOADED and "Krnl")or(OXYGEN_LOADED and "Oxygen U")or(WrapGlobal and "WeAreDevs")or(IsElectron and "Electron")or(isvm and "Proxo")or(shadow_env and "Shadow")or(jit and "EasyExploits")or(getreg()['CalamariLuaEnv'] and "Calamari")or(unit and "‎")or(IS_VIVA_LOADED and "VIVA")or(IS_COCO_LOADED and "Coco")or("Unsupported Executor / No Executer")return a 
@@ -24,6 +26,9 @@ if game.GameId == tonumber(id) then
 else
 		return false
 end	
+end
+function makeNotification(text)
+DiscordLib:Notification("D3xWare",text,"Ok!")
 end
 function randomString(len)
 	local length = len
@@ -67,7 +72,6 @@ local name = "D3xWare V1.0.2"
 local funct = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/getclosestplayer.lua"))()
 local Log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Belkworks/synlog/master/init.lua", "Log"))()
 local time_lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d.lua"))()
-local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/discord-ui.lua")()
 local win = DiscordLib:Window(name)
 local home = win:Server("Home","0")
 local ch = home:Channel("Home")
