@@ -1,4 +1,4 @@
--- // D3xWare V1.0.2
+-- // D3xWare V1.0.2 
 function detectPlaceId(id)
 if game.PlaceId == tonumber(id) then
 		return true
@@ -6,32 +6,6 @@ else
 		return false
 end
 end
-
-function GetClosestPlayer()
-local player = game.Players.LocalPlayer
-local players = game.Players:GetPlayers()
-  local minDistance = math.huge
-  local closestPlayer = nil
-  for _, otherPlayer in pairs(players) do
-    if otherPlayer == player then
-      continue
-    end
-    local distance = (player.Character.PrimaryPart.Position - otherPlayer.Character.PrimaryPart.Position).magnitude
-    if distance < minDistance then
-      closestPlayer = otherPlayer
-      print(closestPlayer)
-      minDistance = distance
-      display = game.Players:FindFirstChild(closestPlayer.Name).DisplayName
-    end
-  end
-if display == closestPlayer.Name then
-return closestPlayer,"has a distance of "..minDistance
-else
-return display..",aka",closestPlayer,"has a distance of "..minDistance
-end
-end
-
-
 function getexploitname()
 local a=
 (TRIGON_LOADED and "Trigon EVO")or(syn and not is_sirhurt_closure and not pebc_execute and "Synapse")or(secure_load and "Sentinel")or(EVON_LOADED and "Evon")or(is_sirhurt_closure and "Sirhurt")or(pebc_execute and "ProtoSmasher")or(KRNL_LOADED and "Krnl")or(OXYGEN_LOADED and "Oxygen U")or(WrapGlobal and "WeAreDevs")or(IsElectron and "Electron")or(isvm and "Proxo")or(shadow_env and "Shadow")or(jit and "EasyExploits")or(getreg()['CalamariLuaEnv'] and "Calamari")or(unit and "‎")or(IS_VIVA_LOADED and "VIVA")or(IS_COCO_LOADED and "Coco")or("Unsupported Executor / No Executer")return a 
@@ -90,6 +64,7 @@ char.Humanoid.JumpPower = v
 end
 end
 local name = "D3xWare V1.0.2"
+local funct = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/getclosestplayer.lua"))()
 local Log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Belkworks/synlog/master/init.lua", "Log"))()
 local time_lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d.lua"))()
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/discord-ui.lua")()
@@ -203,7 +178,7 @@ end)
 chh:Seperator()
 chh:Toggle("Enable shiftlock",true,function(t)
 game.Players.LocalPlayer.DevEnableMouseLock = t	
-end
+end)
 local req_cp = scripts:Channel("Require Scripts")
 req_cp:Label("Click to copy script")
 req_cp:Seperator()
@@ -249,7 +224,7 @@ local aaa = MM:Label("This section is for game detectected scripts.")
 local utils = win:Server("Tools",0)
 local page1 = utils:Channel("Player")
 page1:Button("Nearest Player",function()
-Log:print(GetClosestPlayer())
+Log:print(funct.GetClosestPlayer())
 end)
 if detectPlaceId("155615604") then
 	local plsec = _gam:Channel("Prison Life Scripts")
