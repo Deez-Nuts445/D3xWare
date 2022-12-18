@@ -1,4 +1,4 @@
--- // D3xWare V1.0.2 
+-- // D3xWare V1.0.2B
 function detectPlaceId(id)
 if game.PlaceId == tonumber(id) then
 		return true
@@ -89,7 +89,7 @@ elseif tonumber(v) ~= nil then
 char.Humanoid.JumpPower = v
 end
 end
-local name = "D3xWare V1.0.2"
+local name = "D3xWare V1.0.2B"
 local Log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Belkworks/synlog/master/init.lua", "Log"))()
 local time_lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d.lua"))()
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/discord-ui.lua")()
@@ -203,6 +203,10 @@ end)
 chh:Seperator()
 chh:Toggle("Enable shiftlock",true,function(t)
 game.Players.LocalPlayer.DevEnableMouseLock = t	
+end
+chh:Seperator()
+chh:Button("Server Finder",function()
+loadstring(game:HttpGet("https://www.scriptblox.com/raw/Server-Browser_80", true))()
 end)
 local req_cp = scripts:Channel("Require Scripts")
 req_cp:Label("Click to copy script")
