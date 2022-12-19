@@ -1,5 +1,5 @@
 local list = {
-    ["10679961467"] = "https://raw.githubusercontent.com/Vcsk/AstralHub/main/Games/50-50-Pick-A-Door-Obby/main.lua";
+    ["10679961467"] = "https://raw.githubusercontent.com/Deez-Nuts445/D3xWare/main/ScriptsForGames/1.lua";
 }
 
 for id, url in next, list do
