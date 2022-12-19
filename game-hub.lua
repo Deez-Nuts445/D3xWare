@@ -1,4 +1,4 @@
-local games = {
+local list = {
 
 ["10679961467"] = "https://raw.githubusercontent.com/Deez-Nuts445/D3xWare/main/ScriptsForGames/1.lua"
 
