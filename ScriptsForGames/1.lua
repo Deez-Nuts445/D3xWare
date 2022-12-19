@@ -8,6 +8,7 @@ for k, v in pairs(game:GetService("Workspace").Doors:GetDescendants()) do -- For
         local cor_part = v.Parent
          cor_part.BrickColor = BrickColor.new("Dark green") -- Change the color of the parent
         cor_part.Material = "Neon" -- Explained
+      cor_part.Transparency = 0.5
     end
 end    
 end)
