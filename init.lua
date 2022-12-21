@@ -70,7 +70,6 @@ end
 end
 local name = "D3xWare V1.0.2"
 local funct = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/getclosestplayer.lua"))()
-local Log = loadstring(game:HttpGet("https://raw.githubusercontent.com/Belkworks/synlog/master/init.lua", "Log"))()
 local time_lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d.lua"))()
 local win = DiscordLib:Window(name)
 local home = win:Server("Home","0")
@@ -129,7 +128,6 @@ guiset:Seperator()
 guiset:Textbox("Key", "Key for scripts", false,function(txt)
 		print(txt)
 		key = txt
-		Log:print("Key set!")
 end)
 local scripts = win:Server("Scripts","0")
 local label = scripts:Channel("O2 Scripts")
@@ -232,7 +230,8 @@ local aaa = MM:Label("This section is for game detectected scripts.")
 local utils = win:Server("Tools",0)
 local page1 = utils:Channel("Player")
 page1:Button("Nearest Player",function()
-Log:print(funct.GetClosestPlayer())
+print(funct.GetClosestPlayer())
+DiscordLib:Notification("Hey","Printed closest player!","Ok!")
 end)
 if detectPlaceId("155615604") then
 	local plsec = _gam:Channel("Prison Life Scripts")
