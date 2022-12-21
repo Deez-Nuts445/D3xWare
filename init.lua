@@ -7,7 +7,24 @@ else
 		return false
 end
 end
-
+function getplatform()
+    local GuiService = game:GetService("GuiService")
+local UserInputService = game:GetService("UserInputService")
+    if (GuiService:IsTenFootInterface()) then
+        return "Console"
+    elseif (UserInputService.TouchEnabled and not UserInputService.MouseEnabled) then
+        --touchscreen computers now have touchenabled so make sure to check for lack of mouse too
+		--also, not all phones/tablets have accelerometer and/or gyroscope
+        local DeviceSize = workspace.CurrentCamera.ViewportSize; 
+		if ( DeviceSize.Y > 600 ) then
+			return "Tablet"
+		else
+			return "Phone"
+		end
+    else
+        return "Desktop"
+    end
+end
 function getexploitname()
 local a=
 (TRIGON_LOADED and "Trigon EVO")or(syn and not is_sirhurt_closure and not pebc_execute and "Synapse")or(secure_load and "Sentinel")or(EVON_LOADED and "Evon")or(is_sirhurt_closure and "Sirhurt")or(pebc_execute and "ProtoSmasher")or(KRNL_LOADED and "Krnl")or(OXYGEN_LOADED and "Oxygen U")or(WrapGlobal and "WeAreDevs")or(IsElectron and "Electron")or(isvm and "Proxo")or(shadow_env and "Shadow")or(jit and "EasyExploits")or(getreg()['CalamariLuaEnv'] and "Calamari")or(unit and "‎")or(IS_VIVA_LOADED and "VIVA")or(IS_COCO_LOADED and "Coco")or("Unsupported Executor / No Executer")return a 
@@ -69,6 +86,7 @@ char.Humanoid.JumpPower = v
 end
 end
 local name = "D3xWare V1.0.2"
+local platform = getplatform()
 local funct = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/getclosestplayer.lua"))()
 local time_lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d.lua"))()
 local win = DiscordLib:Window(name)
@@ -160,8 +178,10 @@ chh:Button("Spectate GUI",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/spectategui.lua"))()	
 end)
 chh:Seperator()
-chh:Button("FE Check",function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/FECheck'),true))()
+chh:Button("Keyboard(MOBILE ONLY)",function()
+if platform == "Phone" then
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/mob.txt'),true))()			
+end
 end)
 chh:Seperator()
 chh:Button("ZMod",function()
