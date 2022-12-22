@@ -1,8 +1,6 @@
 # Welcome to D3xWare!
 
 
-### PS: init.lua is the newer version and old.lua is the old version
-
 
 Ways of loading this script:
 
@@ -38,12 +36,13 @@ loadGithubScript("Deez-Nuts445","D3xWare","main","init.lua")
 ```
 
 `3rd way (Executing w/ website)`
+
 **NOTE: YOU NEED A SCRIPTBLOX ACCOUNT FIRST AND YOU HAVE TO SET UP DIRECT EXECUTE FIRST!** 
 
 Go to this link
-```
-https://scriptblox.com/script/Universal-Script-script-gui-thing-6369
-```
+
+[https://scriptblox.com/script/Universal-Script-script-gui-thing-6369](https://scriptblox.com/script/Universal-Script-script-gui-thing-6369 "Either copy and paste or click this hyperlink")
+
 
 You may see a button with the text "Direct execute"
 
