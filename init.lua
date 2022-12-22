@@ -98,6 +98,7 @@ ch:Seperator()
 local pen2 = ch:Label("SessionId: "..randomString(math.random(10,15)))
 ch:Seperator()
 local Exp = ch:Label("Exploit Using: "..getexploitname())
+local pf = ch:Label("Device type: "..platform)
 local plset = home:Channel("Player")
 plset:Textbox("FOV",'"def" for default FOV',false,function(v)
 shared.fov = v
