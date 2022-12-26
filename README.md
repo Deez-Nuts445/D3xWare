@@ -8,7 +8,7 @@ Ways of loading this script:
 - [x] Functions
 - [x] Code executing from PC
 
-### How to load script:
+### Ways of executing D3xWare:
 
 `1st Way (loadstring)`
 
