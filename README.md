@@ -1,14 +1,16 @@
 # Welcome to D3xWare!
 
+  <a href="https://github.com/Deez-Nuts445">
+      <img alt="Developer" src="https://img.shields.io/badge/Developer-Deez--Nuts445-yellow" />
+    </a>
 
-
-Ways of loading this script:
+Currently, D3xWare supports theese ways of executing D3xWare:
 
 - [x] Loadstring
 - [x] Functions
 - [x] Code executing from PC
 
-### Ways of executing D3xWare:
+### Ways of executing D3xWare
 
 `1st Way (loadstring)`
 
