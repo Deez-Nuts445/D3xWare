@@ -9,6 +9,7 @@ local function createNotif(title,text,icon,duration)
 			Duration = duration; 
 		})
 	end
+local aaa = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/notification.lua"))()
 createNotif("D3xWare for NDS","Press Minus to get disaster!")
 spawn(function()
 while wait() do
@@ -21,17 +22,17 @@ if not busy then
 if key.KeyCode == Enum.KeyCode.Minus then
 if ta then
 local v = ta.Value
-createNotif("D3xWare for NDS",string.format("Next disaster is %s",v))
+aaa:notif(string.format("Next disaster is %s",v))
 else
 local success,err = pcall(function()
 local res1 = c:FindFirstChild("SurvivalTag")
 local vv = res1.Value
-createNotif("D3xWare for NDS",string.format("Next disaster is %s",vv))
+aaa:notif(string.format("Next disaster is %s",vv))
 end)
 if success then
 print("Success!")
 else
-createNotif("D3xWare for NDS","SurivalTag still doesen't exist :(")
+aaa:notif("SurivalTag still doesen't exist :(")
 end
 end
 end
