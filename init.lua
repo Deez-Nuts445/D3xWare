@@ -1,4 +1,4 @@
--- // D3xWare V1.0.2 
+-- // D3xWare V1.0.2C 
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/discord-ui.lua")()
 function detectPlaceId(id)
 if game.PlaceId == tonumber(id) then
@@ -85,7 +85,7 @@ elseif tonumber(v) ~= nil then
 char.Humanoid.JumpPower = v
 end
 end
-local name = "D3xWare V1.0.2"
+local name = "D3xWare V1.0.2C"
 local platform = getplatform()
 local funct = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/getclosestplayer.lua"))()
 local time_lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d.lua"))()
@@ -245,7 +245,19 @@ function toClipboard(String)
 end
 toClipboard('require(11172873454).RMIA("'..game.Players.LocalPlayer.Name..'")')
 end)
-local _gam = win:Server("Game Detection","0df")
+req_cp:Button("Draw Tool",function()
+function toClipboard(String)
+	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
+	if clipBoard then
+		clipBoard(String)
+		print("Ok")
+	else
+		warn("No")
+	end
+end
+toClipboard('require(10326222796):GetDrawingTool("'..game.Players.LocalPlayer.Name..'")')
+end)
+local _gam = win:Server("Game Detection","0")
 local MM = _gam:Channel("Info")
 local aaa = MM:Label("This section is for game detectected scripts.")
 local utils = win:Server("Tools",0)
