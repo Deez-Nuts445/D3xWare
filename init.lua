@@ -1,4 +1,13 @@
--- // D3xWare V1.0.2C 
+-- // D3xWare V1.0.3B
+function toClipboard(String)
+	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
+	if clipBoard then
+		clipBoard(String)
+		print("Ok")
+	else
+		warn("No")
+	end
+end
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/discord-ui.lua")()
 function detectPlaceId(id)
 if game.PlaceId == tonumber(id) then
@@ -44,9 +53,6 @@ else
 		return false
 end	
 end
-function makeNotification(text)
-DiscordLib:Notification("D3xWare",text,"Ok!")
-end
 function randomString(len)
 	local length = len
 	local array = {}
@@ -85,20 +91,28 @@ elseif tonumber(v) ~= nil then
 char.Humanoid.JumpPower = v
 end
 end
-local name = "D3xWare V1.0.2C"
+local name = "D3xWare V1.0.3B"
 local platform = getplatform()
+local functs = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/factorial_functions.lua"))()
 local funct = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/getclosestplayer.lua"))()
 local time_lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d.lua"))()
+local sessionId = randomString(math.random(10,15)).."/"..functs.fact(math.random(7,10))
 local win = DiscordLib:Window(name)
 local home = win:Server("Home","0")
 local ch = home:Channel("Home")
 local key
 local welome = ch:Label("Welcome to "..name..","..game.Players.LocalPlayer.Name.."!")
 ch:Seperator()
-local pen2 = ch:Label("SessionId: "..randomString(math.random(10,15)))
+local pen2 = ch:Label("SessionId: "..sessionId)
 ch:Seperator()
 local Exp = ch:Label("Exploit Using: "..getexploitname())
+ch:Seperator()
 local pf = ch:Label("Device type: "..platform)
+ch:Seperator()
+ch:Button("Copy SessionId",function()
+toClipboard(sessionId)
+end)
+
 local plset = home:Channel("Player")
 plset:Textbox("FOV",'"def" for default FOV',false,function(v)
 shared.fov = v
@@ -185,6 +199,14 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/advxzivhsjjdhxhsidif
 end
 end)
 chh:Seperator()
+chh:Button("RTX",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/rtx.lua"))()
+end)
+chh:Seperator()
+chh:Button("Display Name remover",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/displayremover.lua"))()
+end)
+chh:Seperator()
 chh:Button("ZMod",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/VMod"))()
 end)
@@ -210,51 +232,15 @@ local req_cp = scripts:Channel("Require Scripts")
 req_cp:Label("Click to copy script")
 req_cp:Seperator()
 req_cp:Button("NoobConsole V1.0.0",function()
-function toClipboard(String)
-	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
-	if clipBoard then
-		clipBoard(String)
-		print("Ok")
-	else
-		warn("No")
-	end
-end
 toClipboard('require(10510278486).run("'..game.Players.LocalPlayer.Name..'")')
 end)
 req_cp:Button("Some Gui i just open-sourc'd",function()
-function toClipboard(String)
-	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
-	if clipBoard then
-		clipBoard(String)
-		print("Ok")
-	else
-		warn("No")
-	end
-end
 toClipboard("require(10189218393):adrian('"..game.Players.LocalPlayer.Name.."')")
 end)
 req_cp:Button("Bodyguard GUI","",function()
-function toClipboard(String)
-	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
-	if clipBoard then
-		clipBoard(String)
-		print("Ok")
-	else
-		warn("No")
-	end
-end
 toClipboard('require(11172873454).RMIA("'..game.Players.LocalPlayer.Name..'")')
 end)
 req_cp:Button("Draw Tool",function()
-function toClipboard(String)
-	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
-	if clipBoard then
-		clipBoard(String)
-		print("Ok")
-	else
-		warn("No")
-	end
-end
 toClipboard('require(10326222796):GetDrawingTool("'..game.Players.LocalPlayer.Name..'")')
 end)
 local _gam = win:Server("Game Detection","0")
