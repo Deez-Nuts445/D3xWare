@@ -1,5 +1,4 @@
 # Welcome to D3xWare!
-
   <a href="https://github.com/Deez-Nuts445">
       <img alt="Developer" src="https://img.shields.io/badge/Developer-Deez--Nuts445-yellow" />
     </a>
@@ -39,7 +38,8 @@ loadGithubScript("Deez-Nuts445","D3xWare","main","init.lua")
 
 `3rd way (Executing w/ website)`
 
-**NOTE: YOU NEED A SCRIPTBLOX ACCOUNT FIRST AND YOU HAVE TO SET UP DIRECT EXECUTE FIRST!** 
+> **Note** 
+> **YOU NEED A SCRIPTBLOX ACCOUNT FIRST AND YOU HAVE TO SET UP DIRECT EXECUTE FIRST!**
 
 Go to this link
 
