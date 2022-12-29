@@ -1,6 +1,7 @@
 # Welcome to D3xWare!
   <a href="https://github.com/Deez-Nuts445">
-      <img alt="Developer" src="https://img.shields.io/badge/Developer-Deez--Nuts445-yellow" />
+       <img alt="Developer" src="https://img.shields.io/badge/Developer-Deez--Nuts445-yellow" />
+      <img alt="Roblox user of dev" src="https://img.shields.io/badge/Roblox%20User-herman__484-red?style=social&logo=roblox" />
     </a>
 
 Currently, D3xWare supports theese ways of executing D3xWare:
