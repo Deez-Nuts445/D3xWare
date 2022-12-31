@@ -1,4 +1,4 @@
--- // D3xWare V1.0.3B
+-- // D3xWare V1.0.3B btw Happy new year!
 function toClipboard(String)
 	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
 	if clipBoard then
@@ -112,7 +112,8 @@ ch:Seperator()
 ch:Button("Copy SessionId",function()
 toClipboard(sessionId)
 end)
-
+ch:Seperator()
+ch:Label("From 1/1/23: Happy New Year!")
 local plset = home:Channel("Player")
 plset:Textbox("FOV",'"def" for default FOV',false,function(v)
 shared.fov = v
@@ -205,6 +206,10 @@ end)
 chh:Seperator()
 chh:Button("Display Name remover",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/displayremover.lua"))()
+end)
+chh:Seperator()
+chh:Button("Coco Z Hub(NEW YEAR SCRIPT)",function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
 end)
 chh:Seperator()
 chh:Button("ZMod",function()
