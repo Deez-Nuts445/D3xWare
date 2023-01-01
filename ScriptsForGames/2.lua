@@ -22,17 +22,17 @@ if not busy then
 if key.KeyCode == Enum.KeyCode.Minus then
 if ta then
 local v = ta.Value
-aaa:notif(string.format("Next disaster is %s",v))
+aaa:notif(string.format("Next disaster is %s",v),4)
 else
 local success,err = pcall(function()
 local res1 = c:FindFirstChild("SurvivalTag")
 local vv = res1.Value
-aaa:notif(string.format("Next disaster is %s",vv))
+aaa:notif(string.format("Next disaster is %s",vv),4)
 end)
 if success then
 print("Success!")
 else
-aaa:notif("SurivalTag still doesen't exist :(")
+aaa:notif("SurivalTag still doesen't exist :(",4)
 end
 end
 end
