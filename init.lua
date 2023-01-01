@@ -1,4 +1,4 @@
--- // D3xWare V1.0.3B btw Happy new year!
+-- // D3xWare V1.0.3B
 function toClipboard(String)
 	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
 	if clipBoard then
@@ -36,7 +36,7 @@ local UserInputService = game:GetService("UserInputService")
 end
 function getexploitname()
 local a=
-(TRIGON_LOADED and "Trigon EVO")or(syn and not is_sirhurt_closure and not pebc_execute and "Synapse")or(secure_load and "Sentinel")or(EVON_LOADED and "Evon")or(is_sirhurt_closure and "Sirhurt")or(pebc_execute and "ProtoSmasher")or(KRNL_LOADED and "Krnl")or(OXYGEN_LOADED and "Oxygen U")or(WrapGlobal and "WeAreDevs")or(IsElectron and "Electron")or(isvm and "Proxo")or(shadow_env and "Shadow")or(jit and "EasyExploits")or(getreg()['CalamariLuaEnv'] and "Calamari")or(unit and "‎")or(IS_VIVA_LOADED and "VIVA")or(IS_COCO_LOADED and "Coco")or("Unsupported Executor / No Executer")return a 
+(TRIGON_LOADED and "Trigon EVO")or(COMET_LOADED and "Comet")or(syn and not is_sirhurt_closure and not pebc_execute and "Synapse")or(secure_load and "Sentinel")or(EVON_LOADED and "Evon")or(is_sirhurt_closure and "Sirhurt")or(pebc_execute and "ProtoSmasher")or(KRNL_LOADED and "Krnl")or(OXYGEN_LOADED and "Oxygen U")or(WrapGlobal and "WeAreDevs")or(IsElectron and "Electron")or(isvm and "Proxo")or(shadow_env and "Shadow")or(jit and "EasyExploits")or(getreg()['CalamariLuaEnv'] and "Calamari")or(unit and "‎")or(IS_VIVA_LOADED and "VIVA")or(IS_COCO_LOADED and "Coco")or("Unsupported Executor / No Executer")return a 
 end
 function grav(n)
 if n == "def" then
@@ -112,8 +112,7 @@ ch:Seperator()
 ch:Button("Copy SessionId",function()
 toClipboard(sessionId)
 end)
-ch:Seperator()
-ch:Label("From 1/1/23: Happy New Year!")
+
 local plset = home:Channel("Player")
 plset:Textbox("FOV",'"def" for default FOV',false,function(v)
 shared.fov = v
@@ -206,10 +205,6 @@ end)
 chh:Seperator()
 chh:Button("Display Name remover",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/displayremover.lua"))()
-end)
-chh:Seperator()
-chh:Button("Coco Z Hub(NEW YEAR SCRIPT)",function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
 end)
 chh:Seperator()
 chh:Button("ZMod",function()
