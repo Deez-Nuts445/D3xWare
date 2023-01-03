@@ -1,4 +1,18 @@
--- // D3xWare V1.0.3B
+-- // D3xWare V1.0.3C
+function checkDate(mth,day)
+local month = os.date("*t")["month"]
+local _day = os.date("*t")["day"]
+if month == mth then
+if _day == day then
+return true
+else
+return false
+end
+else
+return false
+end
+end
+
 function toClipboard(String)
 	local clipBoard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
 	if clipBoard then
@@ -91,12 +105,22 @@ elseif tonumber(v) ~= nil then
 char.Humanoid.JumpPower = v
 end
 end
-local name = "D3xWare V1.0.3B"
+local old = "D3xWare V1.0.3C"
+local name
 local platform = getplatform()
 local functs = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/factorial_functions.lua"))()
 local funct = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/getclosestplayer.lua"))()
 local time_lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/d.lua"))()
 local sessionId = randomString(math.random(10,15)).."/"..functs.fact(math.random(7,10))
+local isNewYear = checkDate(1,1)
+local isChristmas = checkDate(12,25)
+if isNewYear then
+name = "🎉"..old.."🎉"
+elseif isChristmas then
+name = "🎄"..old.."🎄"
+else
+name = "D3xWare V1.0.3C"	
+end	
 local win = DiscordLib:Window(name)
 local home = win:Server("Home","0")
 local ch = home:Channel("Home")
