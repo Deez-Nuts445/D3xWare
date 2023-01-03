@@ -1,4 +1,5 @@
 -- // D3xWare V1.0.3C
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/Deez-Nuts445/GHSandbox_LUA_1/main/discord-ui.lua")()
 function checkDate(mth,day)
 local month = os.date("*t")["month"]
 local _day = os.date("*t")["day"]
