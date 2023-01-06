@@ -5,6 +5,9 @@
   <a href="https://www.roblox.com/users/3729175718/profile">
         <img alt="Roblox user of dev" src="https://img.shields.io/badge/Roblox%20User-herman__484-red?style=social&logo=roblox" />  
     </a> 
+   <a href="https://github.com/Deez-Nuts445/D3xWare/blob/main/LICENSE.md">
+      <img alt="License" src="https://img.shields.io/github/license/Deez-Nuts445/D3xWare">
+   </a>
 
 Currently, D3xWare supports theese ways of executing D3xWare:
 
