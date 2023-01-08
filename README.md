@@ -11,7 +11,7 @@
 
 
 > **Note**
-> D3xWare Has moved ownership from Deez-Nuts445 to D3x Scripts™️, this resp. has been archived, but the init.lua file will still be executable.
+> D3xWare Has moved ownership from Deez-Nuts445 to D3x Scripts™️, this resp. has been archived, but the init.lua file will still be executable, this resp. **will not** being deleted as it still has scripts that includes Deez-Nuts445's Username.
 
 Currently, D3xWare supports theese ways of executing D3xWare:
 
