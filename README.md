@@ -9,6 +9,10 @@
       <img alt="License" src="https://img.shields.io/github/license/Deez-Nuts445/D3xWare">
    </a>
 
+
+> **Note**
+> D3xWare Has moved ownership from Deez-Nuts445 to D3x Scripts™️, this resp. has been archived, but the init.lua file will still be executable.
+
 Currently, D3xWare supports theese ways of executing D3xWare:
 
 - [x] Loadstring
